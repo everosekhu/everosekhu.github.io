@@ -6,19 +6,13 @@
 		<!-- load scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" 
-
-href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
-<script type="text/javascript" 
-
-src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" 
-
-src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 		<!-- load css -->
+		<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../assets/css/styles.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
 
 	</head>
 	<body>
@@ -37,15 +31,15 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner">
 				    <div class="item active">
-				    	<img src="../assets/images/resto1.jpg">
+				    	<img src="assets/images/resto1.jpg">
 				    </div>
 
 				    <div class="item">
-				    	<img src="../assets/images/resto2.jpg">
+				    	<img src="assets/images/resto2.jpg">
 				    </div>
 
 				    <div class="item">
-				    	<img src="../assets/images/resto3.jpg">
+				    	<img src="assets/images/resto3.jpg">
 				    </div>
 				</div>
 
@@ -84,9 +78,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 							</div>
 							<div>
 								<b><label>Destination:</label></b>
-								<select id="select_destination" class="selectpicker" title="Select Destination">
-									
-								</select>
+								<select id="select_destination" class="selectpicker" title="Select Destination"></select>
 								<input id="get_direction" type="button" value="Get Direction">
 							</div>
 
@@ -101,7 +93,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 					<!-- map container -->
 					<div id="cebu_map" style="width:100%;height:500px;"></div>
 
-					<script type="text/javascript" src="../assets/js/google_map_scripts.js"></script>
+					<script type="text/javascript" src="assets/js/google_map_scripts.js"></script>
 					<script>var temp_data1 = [];
 						var search = {};
 						var current_location = {lat: 10.31111, lng: 123.89167 };			 
@@ -110,7 +102,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 						var cityCircle, markers_arr = [];
 						var autocomplete, destination_lat, destination_lng;
 						var directionsDisplay, directionsService;
-						var restaurant_locations = [], mock_data = [];
+						var mock_data = [];
 
 						function initializeMap() {
 							directionsService = new google.maps.DirectionsService();
@@ -151,7 +143,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 				        </thead>
 				        <tbody></tbody>
 				    </table>
-				    <script type="text/javascript" src="../assets/js/analytics.js"></script>
+
 			    </div>
 				<!-- end analytics -->
 
