@@ -19,23 +19,18 @@
 	var script = document.createElement('script');
 
 		// get mock data
-    script.src = '../assets/js/mock_data.js';
+    script.src = 'assets/js/mock_data.js';
     document.getElementsByTagName('head')[0].appendChild(script);
-
 
     // autocomplete for users current location
 	var input = document.getElementById('user_location');
 		autocomplete = new google.maps.places.Autocomplete(input, map_options);
 
-
-    // listener for direction from user current location to selected destination
-    google.maps.event.addDomListener(document.getElementById('get_direction'), 'click', showRoute);
-
  	// show markers in map
     window.mock_data_callback = function(results) {
     	// check if we have results
     	if(results.data.length > 0) {
-    		restaurant_locations.push('<option>Select Destination</option>');
+    		$('#select_destination').append('<option>Select Destination</option>');
     		mock_data = results.data;
     		window.temp_data1 = results.data;
 
@@ -43,7 +38,7 @@
         		createMarker(results.data[i]);
 
         		// set option content
-                restaurant_locations.push(
+                $('#select_destination').append(
                 	'<option'
                 		+ ' data-lat="' + results.data[i].geometry.coordinates.lat
                 		+ '" data-lng="' + results.data[i].geometry.coordinates.lng
@@ -53,20 +48,18 @@
                 	+ '</option>');
 	        }
 
-	        return results;
 	    }
 
 	    // display # of results found
     	document.getElementById("found").innerHTML = results.data.length;
 
-        // append restaurant options
-        addDestinationOptions(restaurant_locations);
     }
-
+			
+	// listener for direction from user current location to selected destination
+	google.maps.event.addDomListener(document.getElementById('get_direction'), 'click', showRoute);
 
 	// show filter UI
 	showFilterType();
-
 
     // add event for filter
     $( 'input[name="filter_restaurant"]' ).click(function() {
@@ -159,15 +152,6 @@ function removeCircle() {
     }
 }
 
-// append restaurant locations to destination options
-function addDestinationOptions(options) {
-	// empty current list options
-	document.getElementById('select_destination').innerHTML = '';
-
-	// append restaurant location
-	document.getElementById('select_destination').innerHTML = options;
-}
-
 // add direction from current location to destination restaurant
 function showRoute() {
 	// get currently selected dstination
@@ -190,7 +174,6 @@ function showRoute() {
 
 		return;
 	}
-
 
 	removeCircle();
 	var start = new google.maps.LatLng(autocomplete.getPlace().geometry.location.lat(), autocomplete.getPlace().geometry.location.lng());
