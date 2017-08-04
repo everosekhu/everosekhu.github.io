@@ -1,6 +1,4 @@
  $(function () {
-
-
  	// initialize marker info window
 	info_window = new google.maps.InfoWindow();
 
@@ -18,13 +16,13 @@
     // Create a <script> tag
 	var script = document.createElement('script');
 
-		// get mock data
+	// get mock data
     script.src = 'assets/js/mock_data.js';
     document.getElementsByTagName('head')[0].appendChild(script);
-
-    // autocomplete for users current location
-	var input = document.getElementById('user_location');
-		autocomplete = new google.maps.places.Autocomplete(input, map_options);
+	
+	// get user current location
+	$("#user_current_location").html("searching location...");
+	getLocation();
 
  	// show markers in map
     window.mock_data_callback = function(results) {
@@ -159,11 +157,15 @@ function showRoute() {
 
 	document.getElementById('error_container').style.display = 'none';
 	document.getElementById('error_container').innerHTML = '';
+	
+	// get current location coordinates
+	var current_location_lat = $("#user_current_location").attr('data-lat');
+	var current_location_lng = $("#user_current_location").attr('data-lng');
 
 	// check if we have a valid start and end points
-	if(autocomplete.getPlace() == undefined) {
+	if(current_location_lat == null || current_location_lat == undefined) {
 		document.getElementById('error_container').style.display = 'block';
-		document.getElementById('error_container').innerHTML = 'Please set current location.';
+		document.getElementById('error_container').innerHTML = 'Unable to find user location.';
 
 		return;
 	} 
@@ -175,8 +177,9 @@ function showRoute() {
 		return;
 	}
 
+	removeMarkers();
 	removeCircle();
-	var start = new google.maps.LatLng(autocomplete.getPlace().geometry.location.lat(), autocomplete.getPlace().geometry.location.lng());
+	var start = new google.maps.LatLng(current_location_lat, current_location_lng);
 	var end = new google.maps.LatLng(destination_lat, destination_lng);
 	
 	var bounds = new google.maps.LatLngBounds();
@@ -260,6 +263,7 @@ function countFound(location) {
 function filterRestaurants(obj) {
 	removeMarkers();
 	removeCircle();
+	clearRoutes();
 
 	var count = 0;
 
@@ -292,4 +296,88 @@ function showFilterType() {
 
  	$( '#filter_restaurant_container' ).append(options);
 
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        $("#user_current_location").html("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+	var pos = {
+		  lat: position.coords.latitude,
+		  lng: position.coords.longitude
+		};
+	
+	// get user address
+	geocodePosition(pos);
+	
+/*
+	var my_marker = new google.maps.Marker({
+		map: map,
+		position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+	});
+		
+	var my_info_window = new google.maps.InfoWindow;
+	*/
+	
+	
+	/*
+	// create info window content   
+    var my_info_window_content = '<div class="info_content">'
+        + '<h3>My Location</h3>'
+        + '<div>'
+        	+ 	'<b>Latitude:</b> ' + pos.lat
+        	+ 	'<br><b>Longitude:</b> ' + pos.lng
+        + '</div>' +
+    '</div>';
+	
+	// show my locations info window 		
+	my_info_window.setPosition(pos);
+		my_info_window.setContent(my_info_window_content);
+		my_info_window.open(map);
+		map.setCenter(pos);
+		
+	google.maps.event.addListener(my_marker, 'click', function() {
+		my_info_window.setContent(my_info_window_content);
+		my_info_window.open(map);	   
+	});*/
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            $("#user_current_location").html("User denied the request for Geolocation.");
+            break;
+        case error.POSITION_UNAVAILABLE:
+            $("#user_current_location").html("Location information is unavailable.");
+            break;
+        case error.TIMEOUT:
+            $("#user_current_location").html("The request to get user location timed out.");
+            break;
+        case error.UNKNOWN_ERROR:
+            $("#user_current_location").html("An unknown error occurred.");
+            break;
+    }
+}
+
+function geocodePosition(pos) {
+	var address;
+	
+	geocoder.geocode({
+		'location': pos
+	}, function(responses) {
+		if (responses && responses.length > 0) {
+			address = responses[0].formatted_address;
+		} else {
+			address = 'Cannot determine address at this location.';
+		}
+		
+		$("#user_current_location").html(address);
+		$("#user_current_location").attr('data-lat', pos.lat);
+		$("#user_current_location").attr('data-lng', pos.lng);
+	});
 }
