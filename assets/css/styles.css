@@ -27,3 +27,7 @@ table#analytics_table thead th {
 table#analytics_table {
 	margin-top: 20px;
 }
+
+#user_current_location {
+	color: green;
+}
