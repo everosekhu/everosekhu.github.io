@@ -264,13 +264,21 @@ function filterRestaurants(obj) {
 	removeMarkers();
 	removeCircle();
 	clearRoutes();
-
-	var count = 0;
+	
+	// append filter to selected filters
+	var index = selected_filters.indexOf(obj.value);
+	if( index < 0) {
+		selected_filters.push(obj.value);
+	} else {
+		 selected_filters.splice(index, 1);
+	}
 
 	// loop through all mock data
+	var count = 0;
 	for (var i = 0; i < mock_data.length; i++) {
 		// get only restos matching the selected type
-		if(mock_data[i].type == obj.value) {
+		//if(mock_data[i].type == obj.value) {
+		if(selected_filters.indexOf(mock_data[i].type) > -1) {
 			createMarker(mock_data[i]);
 			count++;
 		}
@@ -288,8 +296,8 @@ function showFilterType() {
 	var types = ["Bistro", "Cafe", "Delicatessen", "Fastfood", "Pancake House", "Pizzeria", "Pub", "Sandwich Bar", "Steakhouse", "Tratorria"];
 	$.each( types, function( key, value ) {
 
-		options += '<label class="radio-inline">'
-			+ '<input type="radio" name="filter_restaurant" value="'
+		options += '<label class="checkbox-inline">'
+			+ '<input type="checkbox" name="filter_restaurant" value="'
 				+ value + '"> ' + value
 			+ '</label>';
 	});
