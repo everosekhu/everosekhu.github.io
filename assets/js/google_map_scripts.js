@@ -36,9 +36,8 @@ $(function () {
 		        return (a['name'] > b['name']) ? 1 : ((a['name'] < b['name']) ? -1 : 0);
 		    });
 
-		    // show analytics
-		   // analytics_data(mock_data);
-    		 
+		    // pass data to analytics
+			analytics_data(mock_data);
 
 	        for (var i = 0; i < mock_data.length; i++) {
 
@@ -214,7 +213,7 @@ function showRoute() {
 
             // display # of records found within the circle
 			$('#found').html(mock_data.length);
-        } else {console.log(status);
+        } else {
             document.getElementById('error_container').style.display = 'block';
     		document.getElementById('error_container').innerHTML = 'Please select valid destination.';
 
@@ -305,6 +304,11 @@ function filterRestaurants(obj) {
 	document.getElementById("found").innerHTML = count;
 }
 
+// get filter types
+function getFilterType() {
+	return filter_types.sort();
+}
+
 // shows the options to filter restaurants
 function showFilterType() {
 	// set option values
@@ -321,9 +325,9 @@ function showFilterType() {
 	});
 
  	$( '#filter_restaurant_container' ).append(options);
-
 }
 
+// get user coordinates
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -332,6 +336,7 @@ function getLocation() {
     }
 }
 
+// just passes users coordinates to show formatted address
 function showPosition(position) {
 	var pos = {
 		  lat: position.coords.latitude,
@@ -340,39 +345,9 @@ function showPosition(position) {
 	
 	// get user address
 	geocodePosition(pos);
-	
-/*
-	var my_marker = new google.maps.Marker({
-		map: map,
-		position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
-	});
-		
-	var my_info_window = new google.maps.InfoWindow;
-	*/
-	
-	
-	/*
-	// create info window content   
-    var my_info_window_content = '<div class="info_content">'
-        + '<h3>My Location</h3>'
-        + '<div>'
-        	+ 	'<b>Latitude:</b> ' + pos.lat
-        	+ 	'<br><b>Longitude:</b> ' + pos.lng
-        + '</div>' +
-    '</div>';
-	
-	// show my locations info window 		
-	my_info_window.setPosition(pos);
-		my_info_window.setContent(my_info_window_content);
-		my_info_window.open(map);
-		map.setCenter(pos);
-		
-	google.maps.event.addListener(my_marker, 'click', function() {
-		my_info_window.setContent(my_info_window_content);
-		my_info_window.open(map);	   
-	});*/
 }
 
+// shows the type of error retrieve if fail to get users location
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
@@ -393,6 +368,7 @@ function showError(error) {
     $("#user_current_location").css({'color':'red'});
 }
 
+// get formatted address of users location
 function geocodePosition(pos) {
 	var address;
 	
@@ -402,6 +378,7 @@ function geocodePosition(pos) {
 		if (responses && responses.length > 0) {
 			address = responses[0].formatted_address;
 
+			// enable "Get Direction" button
 			$('#get_direction').prop('disabled', false);
 
 			// set color to green

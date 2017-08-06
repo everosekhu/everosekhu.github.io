@@ -1,10 +1,12 @@
-#map {
+#cebu_map {
 	height: 100%;
+  width: 100%;
 }
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
 	height: 100%;
+  width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -12,13 +14,18 @@ html, body {
 .error {
 	color: #a94442;
   background-color: #f2dede;
-    border-color: #ebccd1;
-    display: none;
-    text-align: center;
-    font-weight: bold;
+  border-color: #ebccd1;
+  display: none;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
 }
 
 #user_current_location {
+	color: green;
+}
+
+.info_content h3 {
 	color: green;
 }
 
@@ -52,7 +59,7 @@ html, body {
   font-weight: 300;
 }
 
-.pac-card div,
+.pac-card div:not(.error),
 .pac-card ul {
   margin: 0px 10px 10px 10px;
   float: left;
@@ -64,14 +71,6 @@ html, body {
 
 div#mode_of_travel select {
   width: 155px;
-}
-
-#analytics {
-  width: 70%;
-  height: 100px;
-}
-.override {
-  width: 100px !important;
 }
 
 div.destination {
@@ -105,4 +104,17 @@ ul#mode_of_travel li {
 
 #found_container {
   margin-top: 10px;
+}
+
+#chart_container {
+	margin: 0 auto;
+	left: 400px !important;
+}
+
+#close_chart {
+	display: none;
+}
+
+div.analytics_select {
+	margin-top: 10px !important;
 }

@@ -2,15 +2,15 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cebu Restaurant Locator</title>
 		
 		<!-- load scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript" src="assets/js/analytics.js"></script>
-		
 		
 		<!-- load css -->
 		<link rel="stylesheet" href="assets/css/styles.css">
-
 	</head>
 	<body>
 		<div class="pac-card" id="pac-card">
@@ -34,7 +34,7 @@
 			</div>
 
 			<div id="mode_of_travel">
-		    	<span>Mode of Travel:</span>
+		    	<label>Mode of Travel:</label>
 				<select id="mode_type">
 			    	<option value="DRIVING">Driving</option>
 			    	<option value="WALKING">Walking</option>
@@ -45,63 +45,71 @@
 
 			<ul id="filter_restaurant_container" class="checkbox">
 				<span>Filter Restaurant:</span>
-			</ul>				
+			</ul>
 
-			
+			<div class="analytics_select">
+		    	<label>Show Analytics for Restaurant:</label>
+				
+				<select id="analytics_type">
+					<option value="resto_ratings">Ratings</option>
+			    	<option value="resto_specialty">Specialty</option>
+					<option value="resto_types">Types</option>
+			    	<option value="resto_visits">Visits</option>
+			    </select>
+
+				<input id="show_analytics" type="button" value="Go" disabled>
+				<input id="close_chart" type="button" value="Close">
+		    </div>
 		</div>
 
 		<!-- start analytics -->
-		    <div id="analytics" class="pac-card">
-		    	<div>Restaurant Analytics</div>
-		    </div>
+		<div id="chart_container"></div>
 		<!-- end analytics -->
 
-			<!-- map container -->
-			<div id="cebu_map" style="width:100%;height:500px;"></div>
+		<!-- map container -->
+		<div id="cebu_map"></div>
 
-			<script type="text/javascript" src="assets/js/google_map_scripts.js"></script>
-			<script>
-				var cebu_location = {lat: 10.31111, lng: 123.89167 };			 
-				var map_options, map, service, info_window, bounds;	
-				var radius = 1000;
-				var cityCircle, markers_arr = [];
-				var destination_lat, destination_lng;
-				var directionsDisplay, directionsService;
-				var mock_data = [];
-				var geocoder;
-				var selected_filters = [];
-				var filter_types = [];
-				var destination_options = [];
+		<script type="text/javascript" src="assets/js/google_map_scripts.js"></script>
+		<script>
+			var cebu_location = {lat: 10.31111, lng: 123.89167 };			 
+			var map_options, map, service, info_window, bounds;	
+			var radius = 1000;
+			var cityCircle, markers_arr = [];
+			var destination_lat, destination_lng;
+			var directionsDisplay, directionsService;
+			var mock_data = [];
+			var geocoder;
+			var selected_filters = [];
+			var filter_types = [];
+			var destination_options = [];
 
-				function initializeMap() {
-					geocoder = new google.maps.Geocoder();
-					directionsService = new google.maps.DirectionsService();
-					directionsDisplay = new google.maps.DirectionsRenderer();
-					map_options= {
-					   	center: new google.maps.LatLng(cebu_location.lat, cebu_location.lng),
-				   		zoom: 15,
-				   		mapTypeControlOptions: {
-              				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-             				position: google.maps.ControlPosition.BOTTOM_CENTER
-          				},
-				   		mapTypeId: google.maps.MapTypeId.ROADMAP,
-				   		componentRestrictions: {country: 'PH'}
-					};
-				
-					map = new google.maps.Map(document.getElementById("cebu_map"), map_options);
-					directionsDisplay.setMap(map);
+			function initializeMap() {
+				geocoder = new google.maps.Geocoder();
+				directionsService = new google.maps.DirectionsService();
+				directionsDisplay = new google.maps.DirectionsRenderer();
+				map_options= {
+				   	center: new google.maps.LatLng(cebu_location.lat, cebu_location.lng),
+			   		zoom: 15,
+			   		mapTypeControlOptions: {
+          				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+         				position: google.maps.ControlPosition.BOTTOM_CENTER
+      				},
+			   		mapTypeId: google.maps.MapTypeId.ROADMAP,
+			   		componentRestrictions: {country: 'PH'}
+				};
+			
+				map = new google.maps.Map(document.getElementById("cebu_map"), map_options);
+				directionsDisplay.setMap(map);
 
-					var card = document.getElementById('pac-card');
-					map.controls[google.maps.ControlPosition.TOP_LEFT].push(card);
+				var card = document.getElementById('pac-card');
+				map.controls[google.maps.ControlPosition.TOP_LEFT].push(card);
 
-					var analytics = document.getElementById('analytics');
-					map.controls[google.maps.ControlPosition.TOP_LEFT].push(analytics);
-	      		}
-			</script>
+				var analytics = document.getElementById('chart_container');
+				map.controls[google.maps.ControlPosition.TOP_CENTER].push(analytics);
+      		}
+		</script>
 
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdQ6z7iZymEnrZl46vWub1-6K0y6uYP6U&libraries=places,geometry,drawing&callback=initializeMap"></script>
-
-	    </div>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdQ6z7iZymEnrZl46vWub1-6K0y6uYP6U&libraries=places,geometry,drawing&callback=initializeMap"></script>
 	    <!-- end restaurant map -->
 	</body>
 </html>
