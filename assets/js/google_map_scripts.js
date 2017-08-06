@@ -1,4 +1,4 @@
- $(function () {
+$(function () {
  	// initialize marker info window
 	info_window = new google.maps.InfoWindow();
 
@@ -21,48 +21,61 @@
     document.getElementsByTagName('head')[0].appendChild(script);
 	
 	// get user current location
-	$("#user_current_location").html("searching location...");
 	getLocation();
 
  	// show markers in map
     window.mock_data_callback = function(results) {
     	// check if we have results
     	if(results.data.length > 0) {
+
     		$('#select_destination').append('<option>Select Destination</option>');
     		mock_data = results.data;
-    		window.temp_data1 = results.data;
 
-	        for (var i = 0; i < results.data.length; i++) {
-        		createMarker(results.data[i]);
+			// sort mock data by name    		
+		    mock_data = mock_data.sort(function(a, b) {
+		        return (a['name'] > b['name']) ? 1 : ((a['name'] < b['name']) ? -1 : 0);
+		    });
+
+		    // show analytics
+		   // analytics_data(mock_data);
+    		 
+
+	        for (var i = 0; i < mock_data.length; i++) {
+
+	        	// get restaurant types
+				if( filter_types.indexOf(mock_data[i].type) < 0) {
+					filter_types.push(mock_data[i].type);
+				}
+	        	
+	        	// add marker to map
+        		createMarker(mock_data[i]);
 
         		// set option content
                 $('#select_destination').append(
                 	'<option'
-                		+ ' data-lat="' + results.data[i].geometry.coordinates.lat
-                		+ '" data-lng="' + results.data[i].geometry.coordinates.lng
+                		+ ' data-lat="' + mock_data[i].geometry.coordinates.lat
+                		+ '" data-lng="' + mock_data[i].geometry.coordinates.lng
                 		+ '">'
-                		+ results.data[i].name 
-                		+ ' -> ' + results.data[i].vicinity
+                		+ mock_data[i].name 
                 	+ '</option>');
 	        }
+
+	        // show filter UI
+			showFilterType();
+
+			// add event for filter
+   			$( 'input[name="filter_restaurant"]' ).click(function() {
+	  			filterRestaurants(this);
+			});
 
 	    }
 
 	    // display # of results found
     	document.getElementById("found").innerHTML = results.data.length;
-
     }
 			
 	// listener for direction from user current location to selected destination
-	google.maps.event.addDomListener(document.getElementById('get_direction'), 'click', showRoute);
-
-	// show filter UI
-	showFilterType();
-
-    // add event for filter
-    $( 'input[name="filter_restaurant"]' ).click(function() {
-	  	filterRestaurants(this);
-	});
+	google.maps.event.addDomListener(document.getElementById('get_direction'), 'click', showRoute);    
 
 });
 
@@ -179,18 +192,21 @@ function showRoute() {
 
 	removeMarkers();
 	removeCircle();
+	
 	var start = new google.maps.LatLng(current_location_lat, current_location_lng);
 	var end = new google.maps.LatLng(destination_lat, destination_lng);
-	
+	var selected_travel_mode = $('#mode_type').val();
 	var bounds = new google.maps.LatLngBounds();
     bounds.extend(start);
     bounds.extend(end);
     map.fitBounds(bounds);
+    
     var request = {
         origin: start,
         destination: end,
-        travelMode: google.maps.TravelMode.DRIVING
+        travelMode: google.maps.TravelMode[selected_travel_mode]
     };
+    
     directionsService.route(request, function (response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(response);
@@ -198,9 +214,9 @@ function showRoute() {
 
             // display # of records found within the circle
 			$('#found').html(mock_data.length);
-        } else {
+        } else {console.log(status);
             document.getElementById('error_container').style.display = 'block';
-    		document.getElementById('error_container').innerHTML = 'Please select destination.';
+    		document.getElementById('error_container').innerHTML = 'Please select valid destination.';
 
     		return false;
         }
@@ -270,7 +286,8 @@ function filterRestaurants(obj) {
 	if( index < 0) {
 		selected_filters.push(obj.value);
 	} else {
-		 selected_filters.splice(index, 1);
+		// remove type from filter
+		selected_filters.splice(index, 1);
 	}
 
 	// loop through all mock data
@@ -291,15 +308,16 @@ function filterRestaurants(obj) {
 // shows the options to filter restaurants
 function showFilterType() {
 	// set option values
-	var options = '<b><label>Filter Restaurant:</label></b>';
+	var options = '';
 
-	var types = ["Bistro", "Cafe", "Delicatessen", "Fastfood", "Pancake House", "Pizzeria", "Pub", "Sandwich Bar", "Steakhouse", "Tratorria"];
-	$.each( types, function( key, value ) {
+	filter_types.sort();
+	$.each( filter_types, function( key, value ) {
 
-		options += '<label class="checkbox-inline">'
+		options += '<li>'
 			+ '<input type="checkbox" name="filter_restaurant" value="'
-				+ value + '"> ' + value
-			+ '</label>';
+				+ value + '">'
+			+ '<label for="' + value + '">' + value + '</label>'
+			+ '</li>';
 	});
 
  	$( '#filter_restaurant_container' ).append(options);
@@ -370,6 +388,9 @@ function showError(error) {
             $("#user_current_location").html("An unknown error occurred.");
             break;
     }
+
+    // set color to red
+    $("#user_current_location").css({'color':'red'});
 }
 
 function geocodePosition(pos) {
@@ -380,6 +401,12 @@ function geocodePosition(pos) {
 	}, function(responses) {
 		if (responses && responses.length > 0) {
 			address = responses[0].formatted_address;
+
+			$('#get_direction').prop('disabled', false);
+
+			// set color to green
+		    $("#user_current_location").css({'color':'green'});
+
 		} else {
 			address = 'Cannot determine address at this location.';
 		}

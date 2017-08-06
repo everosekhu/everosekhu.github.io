@@ -5,115 +5,105 @@
 		
 		<!-- load scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+		<script type="text/javascript" src="assets/js/analytics.js"></script>
+		
+		
 		<!-- load css -->
 		<link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
 
 	</head>
 	<body>
-		<div class="container">
-			<h1>Cebu Restaurant Locator</h1>
+		<div class="pac-card" id="pac-card">
+			<!-- error container -->
+			<div id="error_container" class="error"></div>
 
-			<!-- tabs -->
-			<ul class="nav nav-tabs">
-			    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-			    <li><a data-toggle="tab" href="#analytics">Analytics</a></li>
-			</ul>
-
-			<div class="tab-content">
-				<!-- start restaurant map -->
-			    <div id="home" class="tab-pane fade in active">			      
-					<div>
-						<div class="found_container">
-							<b><label># of Restaurants found:</label></b>
-							<label id="found"></label>
-						</div>
-
-						<!-- container for direction options -->
-						<div class="direction">
-							<div>
-								<b><label>Current Location:</label></b>
-								<label id="user_current_location"></label>
-							</div>
-							
-							<div>
-								<b><label>Destination:</label></b>
-								<select id="select_destination" class="selectpicker" title="Select Destination"></select>
-								<input id="get_direction" type="button" value="Get Direction">
-							</div>
-
-							<div id="filter_restaurant_container" class="filter"></div>				
-
-							<!-- error container -->
-							<div id="error_container" class="error"></div>
-						</div>
-						
-					</div>
-
-					<!-- map container -->
-					<div id="cebu_map" style="width:100%;height:500px;"></div>
-
-					<script type="text/javascript" src="assets/js/google_map_scripts.js"></script>
-					<script>var temp_data1 = [];
-						var search = {};
-						var current_location = {lat: 10.31111, lng: 123.89167 };			 
-						var map_options, map, service, info_window, bounds;	
-						var radius = 1000;
-						var cityCircle, markers_arr = [];
-						var destination_lat, destination_lng;
-						var directionsDisplay, directionsService;
-						var mock_data = [];
-						var geocoder;
-						var selected_filters = [];
-
-						function initializeMap() {
-							geocoder = new google.maps.Geocoder();
-							directionsService = new google.maps.DirectionsService();
-							directionsDisplay = new google.maps.DirectionsRenderer();
-							map_options= {
-							   	center: new google.maps.LatLng(10.31111,123.89167),
-						   		zoom: 15,
-						   		mapTypeId: google.maps.MapTypeId.ROADMAP,
-						   		componentRestrictions: {country: 'PH'}
-							};
-						
-							map = new google.maps.Map(document.getElementById("cebu_map"), map_options);
-							directionsDisplay.setMap(map);
-			      		}
-					</script>
-
-					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdQ6z7iZymEnrZl46vWub1-6K0y6uYP6U&libraries=places,geometry,drawing&callback=initializeMap"></script>
-
-			    </div>
-			    <!-- end restaurant map -->
-
-			    <!-- start analytics -->
-			    <div id="analytics" class="tab-pane fade">
-			    	<h3>Restaurant Analytics</h3>
-
-			    	<table id="analytics_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
-				        <thead>
-				            <tr>
-				                <th>Name</th>
-				                <th>Type</th>
-				                <th>Specialty</th>
-				                <th>Address</th>
-				                <th>Visits</th>
-				                <th>Rating</th>
-				            </tr>
-				        </thead>
-				        <tbody></tbody>
-				    </table>
-
-			    </div>
-				<!-- end analytics -->
-
+			<div id="found_container">
+				<label># of Restaurants found:</label>
+				<label id="found"></label>
 			</div>
+
+			<div>
+				<label>Current Location:</label>
+				<label id="user_current_location"></label>
+			</div>
+			
+			<div class="destination">
+				<label>Destination:</label>
+				<select id="select_destination" class="selectpicker" title="Select Destination"></select>
+				<input id="get_direction" type="button" value="Get Direction" disabled>
+			</div>
+
+			<div id="mode_of_travel">
+		    	<span>Mode of Travel:</span>
+				<select id="mode_type">
+			    	<option value="DRIVING">Driving</option>
+			    	<option value="WALKING">Walking</option>
+			    	<option value="BICYCLING">Bicycling</option>
+			    	<option value="TRANSIT">Transit</option>
+			    </select>
+		    </div>
+
+			<ul id="filter_restaurant_container" class="checkbox">
+				<span>Filter Restaurant:</span>
+			</ul>				
+
+			
 		</div>
+
+		<!-- start analytics -->
+		    <div id="analytics" class="pac-card">
+		    	<div>Restaurant Analytics</div>
+		    </div>
+		<!-- end analytics -->
+
+			<!-- map container -->
+			<div id="cebu_map" style="width:100%;height:500px;"></div>
+
+			<script type="text/javascript" src="assets/js/google_map_scripts.js"></script>
+			<script>
+				var cebu_location = {lat: 10.31111, lng: 123.89167 };			 
+				var map_options, map, service, info_window, bounds;	
+				var radius = 1000;
+				var cityCircle, markers_arr = [];
+				var destination_lat, destination_lng;
+				var directionsDisplay, directionsService;
+				var mock_data = [];
+				var geocoder;
+				var selected_filters = [];
+				var filter_types = [];
+				var destination_options = [];
+
+				function initializeMap() {
+					geocoder = new google.maps.Geocoder();
+					directionsService = new google.maps.DirectionsService();
+					directionsDisplay = new google.maps.DirectionsRenderer();
+					map_options= {
+					   	center: new google.maps.LatLng(cebu_location.lat, cebu_location.lng),
+				   		zoom: 15,
+				   		mapTypeControlOptions: {
+              				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+             				position: google.maps.ControlPosition.BOTTOM_CENTER
+          				},
+				   		mapTypeId: google.maps.MapTypeId.ROADMAP,
+				   		componentRestrictions: {country: 'PH'}
+					};
+				
+					map = new google.maps.Map(document.getElementById("cebu_map"), map_options);
+					directionsDisplay.setMap(map);
+
+					var card = document.getElementById('pac-card');
+					map.controls[google.maps.ControlPosition.TOP_LEFT].push(card);
+
+					var analytics = document.getElementById('analytics');
+					map.controls[google.maps.ControlPosition.TOP_LEFT].push(analytics);
+	      		}
+			</script>
+
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdQ6z7iZymEnrZl46vWub1-6K0y6uYP6U&libraries=places,geometry,drawing&callback=initializeMap"></script>
+
+	    </div>
+	    <!-- end restaurant map -->
 	</body>
 </html>
