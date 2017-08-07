@@ -2,6 +2,7 @@ mock_data_callback(
 	{
 		"data": [
 			{
+				"id": 1,
 				"type": "Bistro",
 				"specialty": [
 					"Desserts", 
@@ -18,9 +19,24 @@ mock_data_callback(
 			        	"lat": 10.31390793,
 			        	"lng": 123.88166469
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2909.53
+					},
+					{
+						"year": 2016,
+						"amount": 2139.18
+					},
+					{
+						"year": 2017,
+						"amount": 4108.37
+					}
+				]
 	      	},
 	      	{
+				"id": 2,
 				"type": "Pizzeria",
 				"specialty": [
 					"Noodles"
@@ -35,9 +51,24 @@ mock_data_callback(
 			        	"lat": 10.32185373,
 			        	"lng": 123.88340276
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4998.78
+					},
+					{
+						"year": 2016,
+						"amount": 4706.72
+					},
+					{
+						"year": 2017,
+						"amount": 4923.64
+					}
+				]
 	      	},
 	      	{
+				"id": 3,
 				"type": "Delicatessen",
 				"specialty": [
 					"Desserts", 
@@ -53,9 +84,24 @@ mock_data_callback(
 			        	"lat": 10.31900133,
 			        	"lng": 123.87734556
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4131.73
+					},
+					{
+						"year": 2016,
+						"amount": 2525.32
+					},
+					{
+						"year": 2017,
+						"amount": 1704.77
+					}
+				]
 	      	},
 	      	{
+				"id": 4,
 				"type": "Pizzeria",
 				"specialty": [
 					"Cereals", 
@@ -71,9 +117,24 @@ mock_data_callback(
 			        	"lat": 10.3207656,
 			        	"lng": 123.88611651
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2157.03
+					},
+					{
+						"year": 2016,
+						"amount": 3435.15
+					},
+					{
+						"year": 2017,
+						"amount": 3110.63
+					}
+				]
 	      	},
 	      	{
+				"id": 5,
 				"type": "Steakhouse",
 				"specialty": [
 					"Pasta"
@@ -88,9 +149,24 @@ mock_data_callback(
 			        	"lat": 10.3083226,
 			        	"lng": 123.89017152
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2375.48
+					},
+					{
+						"year": 2016,
+						"amount": 4821.36
+					},
+					{
+						"year": 2017,
+						"amount": 2322.72
+					}
+				]
 	      	},
 	      	{
+				"id": 6,
 				"type": "Pizzeria",
 				"specialty": [
 					"Pasta", "Sandwiches"
@@ -105,9 +181,24 @@ mock_data_callback(
 			        	"lat": 10.3314409,
 			        	"lng": 123.890712
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2273.48
+					},
+					{
+						"year": 2016,
+						"amount": 4922.47
+					},
+					{
+						"year": 2017,
+						"amount": 3206.18
+					}
+				]
 	      	},
 	      	{
+				"id": 7,
 				"type": "Pizzeria",
 				"specialty": [
 					"Salads", 
@@ -124,9 +215,24 @@ mock_data_callback(
 			        	"lat": 10.31629059,
 			        	"lng": 123.88699883
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3794.04
+					},
+					{
+						"year": 2016,
+						"amount": 2287.77
+					},
+					{
+						"year": 2017,
+						"amount": 1813.75
+					}
+				]
 	      	},
 	      	{
+				"id": 8,
 				"type": "Bistro",
 				"specialty": [
 					"Stews", 
@@ -143,9 +249,24 @@ mock_data_callback(
 			        	"lat": 10.31918841,
 			        	"lng": 123.8809886
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3684.09
+					},
+					{
+						"year": 2016,
+						"amount": 4928.89
+					},
+					{
+						"year": 2017,
+						"amount": 2985.80
+					}
+				]
 	      	},
 	      	{
+				"id": 9,
 				"type": "Pizzeria",
 				"specialty": [
 					"Pasta"
@@ -160,9 +281,24 @@ mock_data_callback(
 			        	"lat": 10.31406529,
 			        	"lng": 123.88157957
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2872.65
+					},
+					{
+						"year": 2016,
+						"amount": 4065.79
+					},
+					{
+						"year": 2017,
+						"amount": 3706.63
+					}
+				]
 	      	},
 	      	{
+				"id": 10,
 				"type": "Cafe",
 				"specialty": [
 					"Seafood", 
@@ -179,9 +315,24 @@ mock_data_callback(
 			        	"lat": 10.30922361,
 			        	"lng": 123.89028385
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4111.98
+					},
+					{
+						"year": 2016,
+						"amount": 1862.06
+					},
+					{
+						"year": 2017,
+						"amount": 2947.42
+					}
+				]
 	      	},
 	      	{
+				"id": 11,
 				"type": "Pancake House",
 				"specialty": [
 					"Pies", 
@@ -198,9 +349,24 @@ mock_data_callback(
 			        	"lat": 10.32088492,
 			        	"lng": 123.88745694
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1719.71
+					},
+					{
+						"year": 2016,
+						"amount": 4707.84
+					},
+					{
+						"year": 2017,
+						"amount": 1541.90
+					}
+				]
 	      	},
 	      	{
+				"id": 12,
 				"type": "Sandwich Bar",
 				"specialty": [
 					"Soups", 
@@ -216,9 +382,24 @@ mock_data_callback(
 			        	"lat": 10.3149208,
 			        	"lng": 123.8820569
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4939.94
+					},
+					{
+						"year": 2016,
+						"amount": 2877.24
+					},
+					{
+						"year": 2017,
+						"amount": 3042.58
+					}
+				]
 	      	},
 	      	{
+				"id": 13,
 				"type": "Sandwich Bar",
 				"specialty": [
 					"Seafood", 
@@ -234,9 +415,24 @@ mock_data_callback(
 			        	"lat": 10.311326,
 			        	"lng": 123.897302
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2595.68
+					},
+					{
+						"year": 2016,
+						"amount": 1747.62
+					},
+					{
+						"year": 2017,
+						"amount": 1946.20
+					}
+				]
 	      	},
 	      	{
+				"id": 14,
 				"type": "Steakhouse",
 				"specialty": [
 					"Stews", 
@@ -253,9 +449,24 @@ mock_data_callback(
 			        	"lat": 10.30864478,
 			        	"lng": 123.89021783
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2283.10
+					},
+					{
+						"year": 2016,
+						"amount": 2680.49
+					},
+					{
+						"year": 2017,
+						"amount": 3928.47
+					}
+				]
 	      	},
 	      	{
+				"id": 15,
 	      		"type": "Tratorria",
 				"specialty": [
 					"Salads"
@@ -270,9 +481,24 @@ mock_data_callback(
 			        	"lat": 10.30935853,
 			        	"lng": 123.88103438
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1688.88
+					},
+					{
+						"year": 2016,
+						"amount": 4892.49
+					},
+					{
+						"year": 2017,
+						"amount": 3699.14
+					}
+				]
 	      	},
 	      	{
+				"id": 16,
 				"type": "Pub",
 				"specialty": [
 					"Sandwiches"
@@ -287,9 +513,24 @@ mock_data_callback(
 			        	"lat": 10.331840,
 			        	"lng": 123.907760
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4207.61
+					},
+					{
+						"year": 2016,
+						"amount": 1866.19
+					},
+					{
+						"year": 2017,
+						"amount": 1960.43
+					}
+				]
 	      	},
 	      	{
+				"id": 17,
 				"type": "Cafe",
 				"specialty": [
 					"Pies"
@@ -304,9 +545,24 @@ mock_data_callback(
 			        	"lat": 10.331571,
 			        	"lng": 123.909091
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1804.76
+					},
+					{
+						"year": 2016,
+						"amount": 2332.26
+					},
+					{
+						"year": 2017,
+						"amount": 2047.80
+					}
+				]
 	      	},
 	      	{
+				"id": 18,
 	      		"type": "Sandwich Bar",
 				"specialty": [
 					"Noodles", 
@@ -322,9 +578,24 @@ mock_data_callback(
 			        	"lat": 10.335307,
 			        	"lng": 123.912113
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1513.65
+					},
+					{
+						"year": 2016,
+						"amount": 3898.42
+					},
+					{
+						"year": 2017,
+						"amount": 1706.73
+					}
+				]
 	      	},
 	      	{
+				"id": 19,
 				"type": "Cafe",
 				"specialty": [
 					"Salads", 
@@ -341,9 +612,24 @@ mock_data_callback(
 			        	"lat": 10.333870,
 			        	"lng": 123.890486
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1840.67
+					},
+					{
+						"year": 2016,
+						"amount": 2133.68
+					},
+					{
+						"year": 2017,
+						"amount": 3234.07
+					}
+				]
 	      	},
 	      	{
+				"id": 20,
 				"type": "Delicatessen",
 				"specialty": [
 					"Stews"
@@ -358,9 +644,24 @@ mock_data_callback(
 			        	"lat": 10.315072,
 			        	"lng": 123.906812
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1926.38
+					},
+					{
+						"year": 2016,
+						"amount": 2414.22
+					},
+					{
+						"year": 2017,
+						"amount": 3868.20
+					}
+				]
 	      	},
 	      	{
+				"id": 21,
 				"type": "Cafe",
 				"specialty": [
 					"Seafood", 
@@ -377,9 +678,24 @@ mock_data_callback(
 			        	"lat": 10.317700,
 			        	"lng": 123.909361
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2790.38
+					},
+					{
+						"year": 2016,
+						"amount": 2944.88
+					},
+					{
+						"year": 2017,
+						"amount": 4544.94
+					}
+				]
 	      	},
 	      	{
+				"id": 22,
 				"type": "Pizzeria",
 				"specialty": [
 					"Soups", 
@@ -395,9 +711,24 @@ mock_data_callback(
 			        	"lat": 10.303608,
 			        	"lng": 123.889090
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1590.10
+					},
+					{
+						"year": 2016,
+						"amount": 4145.82
+					},
+					{
+						"year": 2017,
+						"amount": 3490.95
+					}
+				]
 	      	},
 	      	{
+				"id": 23,
 				"type": "Pub",
 				"specialty": [
 					"Pies"
@@ -412,9 +743,24 @@ mock_data_callback(
 			        	"lat": 10.303369,
 			        	"lng": 123.895402
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3484.55
+					},
+					{
+						"year": 2016,
+						"amount": 2403.37
+					},
+					{
+						"year": 2017,
+						"amount": 2186.03
+					}
+				]
 	      	},
 	      	{
+				"id": 24,	
 				"type": "Tratorria",
 				"specialty": [
 					"Cereals", 
@@ -431,9 +777,24 @@ mock_data_callback(
 			        	"lat": 10.321043,
 			        	"lng": 123.896707
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2129.63
+					},
+					{
+						"year": 2016,
+						"amount": 3765.77
+					},
+					{
+						"year": 2017,
+						"amount": 1637.12
+					}
+				]
 	      	},
 	      	{
+				"id": 25,
 				"type": "Steakhouse",
 				"specialty": [
 					"Stews", 
@@ -449,9 +810,24 @@ mock_data_callback(
 			        	"lat": 10.315233,
 			        	"lng": 123.889779
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4069.79
+					},
+					{
+						"year": 2016,
+						"amount": 3196.59
+					},
+					{
+						"year": 2017,
+						"amount": 2531.61
+					}
+				]
 	      	},
 	      	{
+				"id": 26,
 				"type": "Steakhouse",
 				"specialty": [
 					"Pies"
@@ -466,9 +842,24 @@ mock_data_callback(
 			        	"lat": 10.318020,
 			        	"lng": 123.890251
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2953.52
+					},
+					{
+						"year": 2016,
+						"amount": 4299.71
+					},
+					{
+						"year": 2017,
+						"amount": 4325.91
+					}
+				]
 	      	},
 	      	{
+				"id": 27,
 				"type": "Cafe",
 				"specialty": [
 					"Soups"
@@ -483,9 +874,24 @@ mock_data_callback(
 			        	"lat": 10.314473,
 			        	"lng": 123.894049
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3542.10
+					},
+					{
+						"year": 2016,
+						"amount": 4617.02
+					},
+					{
+						"year": 2017,
+						"amount": 3079.44
+					}
+				]
 	      	},
 	      	{
+				"id": 28,
 				"type": "Tratorria",
 				"specialty": [
 					"Desserts"
@@ -500,9 +906,24 @@ mock_data_callback(
 			        	"lat": 10.302351,
 			        	"lng": 123.908004
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4621.74
+					},
+					{
+						"year": 2016,
+						"amount": 1579.32
+					},
+					{
+						"year": 2017,
+						"amount": 2621.15
+					}
+				]
 	      	},
 	      	{
+				"id": 29,
 				"type": "Delicatessen",
 				"specialty": [
 					"Stews"
@@ -517,9 +938,24 @@ mock_data_callback(
 			        	"lat": 10.305511,
 			        	"lng": 123.905587
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2991.83
+					},
+					{
+						"year": 2016,
+						"amount": 2972.14
+					},
+					{
+						"year": 2017,
+						"amount": 2336.19
+					}
+				]
 	      	},
 	      	{
+				"id": 30,
 				"type": "Tratorria",
 				"specialty": [
 					"Pies"
@@ -534,9 +970,24 @@ mock_data_callback(
 			        	"lat": 10.291569,
 			        	"lng": 123.896443
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3527.91
+					},
+					{
+						"year": 2016,
+						"amount": 3127.83
+					},
+					{
+						"year": 2017,
+						"amount": 2100.20
+					}
+				]
 	      	},
 	      	{
+				"id": 31,
 				"type": "Bistro",
 				"specialty": [
 					"Soups"
@@ -551,9 +1002,24 @@ mock_data_callback(
 			        	"lat": 10.292705,
 			        	"lng": 123.888323
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1934.91
+					},
+					{
+						"year": 2016,
+						"amount": 4706.64
+					},
+					{
+						"year": 2017,
+						"amount": 4528.75
+					}
+				]
 	      	},
 	      	{
+				"id": 32,
 				"type": "Tratorria",
 				"specialty": [
 					"Seafood"
@@ -568,9 +1034,24 @@ mock_data_callback(
 			        	"lat": 10.295003,
 			        	"lng": 123.892411
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2409.66
+					},
+					{
+						"year": 2016,
+						"amount": 1894.19
+					},
+					{
+						"year": 2017,
+						"amount": 2778.62
+					}
+				]
 	      	},
 	      	{
+				"id": 33,
 				"type": "Fastfood",
 				"specialty": [
 					"Seafood"
@@ -585,9 +1066,24 @@ mock_data_callback(
 			        	"lat": 10.295436,
 			        	"lng": 123.891858
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4320.43
+					},
+					{
+						"year": 2016,
+						"amount": 4912.19
+					},
+					{
+						"year": 2017,
+						"amount": 1654.90
+					}
+				]
 	      	},
 	      	{
+				"id": 34,
 				"type": "Steakhouse",
 				"specialty": [
 					"Pasta"
@@ -602,9 +1098,24 @@ mock_data_callback(
 			        	"lat": 10.295436,
 			        	"lng": 123.896971
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2822.41
+					},
+					{
+						"year": 2016,
+						"amount": 4256.63
+					},
+					{
+						"year": 2017,
+						"amount": 4436.97
+					}
+				]
 	      	},
 	      	{
+				"id": 35,
 				"type": "Pancake House",
 				"specialty": [
 					"Noodles", 
@@ -621,9 +1132,24 @@ mock_data_callback(
 			        	"lat": 10.294706,
 			        	"lng": 123.900454
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4254.56
+					},
+					{
+						"year": 2016,
+						"amount": 3543.53
+					},
+					{
+						"year": 2017,
+						"amount": 3404.92
+					}
+				]
 	      	},
 	      	{
+				"id": 36,
 				"type": "Fastfood",
 				"specialty": [
 					"Stews",
@@ -639,9 +1165,24 @@ mock_data_callback(
 			        	"lat": 10.296101,
 			        	"lng": 123.895818
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2365.21
+					},
+					{
+						"year": 2016,
+						"amount": 1775.74
+					},
+					{
+						"year": 2017,
+						"amount": 2764.76
+					}
+				]
 	      	},
 	      	{
+				"id": 37,
 				"type": "Pub",
 				"specialty": [
 					"Pies"
@@ -656,9 +1197,24 @@ mock_data_callback(
 			        	"lat": 10.299797,
 			        	"lng": 123.903163
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4703.51
+					},
+					{
+						"year": 2016,
+						"amount": 3222.11
+					},
+					{
+						"year": 2017,
+						"amount": 4757.00
+					}
+				]
 	      	},
 	      	{
+				"id": 38,
 				"type": "Delicatessen",
 				"specialty": [
 					"Pasta"
@@ -673,9 +1229,24 @@ mock_data_callback(
 			        	"lat": 10.304393,
 			        	"lng": 123.907830
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2453.22
+					},
+					{
+						"year": 2016,
+						"amount": 2722.99
+					},
+					{
+						"year": 2017,
+						"amount": 2185.52
+					}
+				]
 	      	},
 	      	{
+				"id": 39,
 				"type": "Pub",
 				"specialty": [
 					"Pies"
@@ -690,9 +1261,24 @@ mock_data_callback(
 			        	"lat": 10.304580,
 			        	"lng": 123.910079
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4039.19
+					},
+					{
+						"year": 2016,
+						"amount": 4188.86
+					},
+					{
+						"year": 2017,
+						"amount": 2068.82
+					}
+				]
 	      	},
 	      	{
+				"id": 40,
 				"type": "Delicatessen",
 				"specialty": [
 					"Pasta"
@@ -707,9 +1293,24 @@ mock_data_callback(
 			        	"lat": 10.307154,
 			        	"lng": 123.910517
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4679.49
+					},
+					{
+						"year": 2016,
+						"amount": 2891.20
+					},
+					{
+						"year": 2017,
+						"amount": 1892.38
+					}
+				]
 	      	},
 	      	{
+				"id": 41,
 				"type": "Bistro",
 				"specialty": [
 					"Pasta",
@@ -725,9 +1326,24 @@ mock_data_callback(
 			        	"lat": 10.307396,
 			        	"lng": 123.908905
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2053.11
+					},
+					{
+						"year": 2016,
+						"amount": 2291.97
+					},
+					{
+						"year": 2017,
+						"amount": 3917.22
+					}
+				]
 	      	},
 	      	{
+				"id": 42,
 				"type": "Pub",
 				"specialty": [
 					"Stews",
@@ -744,9 +1360,24 @@ mock_data_callback(
 			        	"lat": 10.308202,
 			        	"lng": 123.907695
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3174.20
+					},
+					{
+						"year": 2016,
+						"amount": 4121.65
+					},
+					{
+						"year": 2017,
+						"amount": 3544.44
+					}
+				]
 	      	},
 	      	{
+				"id": 43,
 				"type": "Pizzeria",
 				"specialty": [
 					"Sandwiches",
@@ -763,9 +1394,24 @@ mock_data_callback(
 			        	"lat": 10.307534,
 			        	"lng": 123.907051
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3667.75
+					},
+					{
+						"year": 2016,
+						"amount": 3560.74
+					},
+					{
+						"year": 2017,
+						"amount": 2311.40
+					}
+				]
 	      	},
 	      	{
+				"id": 44,
 				"type": "Steakhouse",
 				"specialty": [
 					"Cereals",
@@ -782,9 +1428,24 @@ mock_data_callback(
 			        	"lat": 10.310204,
 			        	"lng": 123.904301
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3780.97
+					},
+					{
+						"year": 2016,
+						"amount": 2816.39
+					},
+					{
+						"year": 2017,
+						"amount": 1938.25
+					}
+				]
 	      	},
 	      	{
+				"id": 45,
 				"type": "Pub",
 				"specialty": [
 					"Pies",
@@ -800,9 +1461,24 @@ mock_data_callback(
 			        	"lat": 10.310910,
 			        	"lng": 123.903596
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2814.01
+					},
+					{
+						"year": 2016,
+						"amount": 3338.38
+					},
+					{
+						"year": 2017,
+						"amount": 2401.24
+					}
+				]
 	      	},
 	      	{
+				"id": 46,
 	      		"type": "Pizzeria",
 				"specialty": [
 					"Sandwiches",
@@ -819,9 +1495,24 @@ mock_data_callback(
 			        	"lat": 10.310618,
 			        	"lng": 123.904792
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3076.71
+					},
+					{
+						"year": 2016,
+						"amount": 2161.48
+					},
+					{
+						"year": 2017,
+						"amount": 3641.70
+					}
+				]
 	      	},
 	      	{
+				"id": 47,
 				"type": "Steakhouse",
 				"specialty": [
 					"Cereals",
@@ -838,9 +1529,24 @@ mock_data_callback(
 			        	"lat": 10.310422,
 			        	"lng": 123.901504
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2571.23
+					},
+					{
+						"year": 2016,
+						"amount": 3343.37
+					},
+					{
+						"year": 2017,
+						"amount": 1873.60
+					}
+				]
 	      	},
 	      	{
+				"id": 48,
 				"type": "Pancake House",
 				"specialty": [
 					"Cereals",
@@ -857,9 +1563,24 @@ mock_data_callback(
 			        	"lat": 10.310089,
 			        	"lng": 123.900946
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4999.37
+					},
+					{
+						"year": 2016,
+						"amount": 1906.37
+					},
+					{
+						"year": 2017,
+						"amount": 4448.14
+					}
+				]
 	      	},
 	      	{
+				"id": 49,
 				"type": "Pub",
 				"specialty": [
 					"Pies",
@@ -875,9 +1596,24 @@ mock_data_callback(
 			        	"lat": 10.311056,
 			        	"lng": 123.902094
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4089.25
+					},
+					{
+						"year": 2016,
+						"amount": 1792.43
+					},
+					{
+						"year": 2017,
+						"amount": 3313.20
+					}
+				]
 	      	},
 	      	{
+				"id": 50,
 				"type": "Cafe",
 				"specialty": [
 					"Desserts",
@@ -893,9 +1629,24 @@ mock_data_callback(
 			        	"lat": 10.310299,
 			        	"lng": 123.898039
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4046.70
+					},
+					{
+						"year": 2016,
+						"amount": 1727.72
+					},
+					{
+						"year": 2017,
+						"amount": 4335.11
+					}
+				]
 	      	},
 	      	{
+				"id": 51,
 				"type": "Delicatessen",
 				"specialty": [
 					"Soups",
@@ -912,9 +1663,24 @@ mock_data_callback(
 			        	"lat": 10.305643,
 			        	"lng": 123.899049
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2754.03
+					},
+					{
+						"year": 2016,
+						"amount": 4032.21
+					},
+					{
+						"year": 2017,
+						"amount": 2906.18
+					}
+				]
 	      	},
 	      	{
+				"id": 52,
 				"type": "Pub",
 				"specialty": [
 					"Noodles",
@@ -931,9 +1697,24 @@ mock_data_callback(
 			        	"lat": 10.304330,
 			        	"lng": 123.894921
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2625.52
+					},
+					{
+						"year": 2016,
+						"amount": 4992.13
+					},
+					{
+						"year": 2017,
+						"amount": 3386.05
+					}
+				]
 	      	},
 	      	{
+				"id": 53,
 				"type": "Pancake House",
 				"specialty": [
 					"Stews", 
@@ -950,9 +1731,24 @@ mock_data_callback(
 			        	"lat": 10.301347,
 			        	"lng": 123.890344
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1838.78
+					},
+					{
+						"year": 2016,
+						"amount": 2410.39
+					},
+					{
+						"year": 2017,
+						"amount": 4360.04
+					}
+				]
 	      	},
 	      	{
+				"id": 54,
 				"type": "Steakhouse",
 				"specialty": [
 					"Soups", 
@@ -968,9 +1764,24 @@ mock_data_callback(
 			        	"lat": 10.295015,
 			        	"lng": 123.892716
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1641.03
+					},
+					{
+						"year": 2016,
+						"amount": 3796.91
+					},
+					{
+						"year": 2017,
+						"amount": 2718.99
+					}
+				]
 	      	},
 	      	{
+				"id": 55,
 				"type": "Pizzeria",
 				"specialty": [
 					"Pies", 
@@ -987,9 +1798,24 @@ mock_data_callback(
 			        	"lat": 10.298206,
 			        	"lng": 123.886711
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2514.51
+					},
+					{
+						"year": 2016,
+						"amount": 4981.11
+					},
+					{
+						"year": 2017,
+						"amount": 2602.26
+					}
+				]
 	      	},
 	      	{
+				"id": 56,
 				"type": "Cafe",
 				"specialty": [
 					"Pasta"
@@ -1004,9 +1830,24 @@ mock_data_callback(
 			        	"lat": 10.295558,
 			        	"lng": 123.873252
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1900.69
+					},
+					{
+						"year": 2016,
+						"amount": 3870.41
+					},
+					{
+						"year": 2017,
+						"amount": 3912.22
+					}
+				]
 	      	},
 	      	{
+				"id": 57,
 				"type": "Bistro",
 				"specialty": [
 					"Pies", 
@@ -1023,9 +1864,24 @@ mock_data_callback(
 			        	"lat": 10.287457,
 			        	"lng": 123.882101
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2779.86
+					},
+					{
+						"year": 2016,
+						"amount": 3659.66
+					},
+					{
+						"year": 2017,
+						"amount": 3405.19
+					}
+				]
 	      	},
 	      	{
+				"id": 58,
 				"type": "Pub",
 				"specialty": [
 					"Pasta", 
@@ -1042,9 +1898,24 @@ mock_data_callback(
 			        	"lat": 10.288562,
 			        	"lng": 123.874089
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2873.02
+					},
+					{
+						"year": 2016,
+						"amount": 1795.55
+					},
+					{
+						"year": 2017,
+						"amount": 2186.71
+					}
+				]
 	      	},
 	      	{
+				"id": 59,
 				"type": "Pancake House",
 				"specialty": [
 					"Cereals"
@@ -1059,9 +1930,24 @@ mock_data_callback(
 			        	"lat": 10.289315,
 			        	"lng": 123.867235
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4933.99
+					},
+					{
+						"year": 2016,
+						"amount": 2842.52
+					},
+					{
+						"year": 2017,
+						"amount": 3010.82
+					}
+				]
 	      	},
 	      	{
+				"id": 60,
 				"type": "Fastfood",
 				"specialty": [
 					"Salads", 
@@ -1077,9 +1963,24 @@ mock_data_callback(
 			        	"lat": 10.299919,
 			        	"lng": 123.887407
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2966.60
+					},
+					{
+						"year": 2016,
+						"amount": 4987.92
+					},
+					{
+						"year": 2017,
+						"amount": 4917.74
+					}
+				]
 	      	},
 	      	{
+				"id": 61,
 				"type": "Fastfood",
 				"specialty": [
 					"Desserts", 
@@ -1095,9 +1996,24 @@ mock_data_callback(
 			        	"lat": 10.299262,
 			        	"lng": 123.889516
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3708.90
+					},
+					{
+						"year": 2016,
+						"amount": 3222.20
+					},
+					{
+						"year": 2017,
+						"amount": 2109.62
+					}
+				]
 	      	},
 	      	{
+				"id": 62,
 				"type": "Pub",
 				"specialty": [
 					"Seafood", 
@@ -1114,9 +2030,24 @@ mock_data_callback(
 			        	"lat": 10.310579,
 			        	"lng": 123.895215
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4820.75
+					},
+					{
+						"year": 2016,
+						"amount": 2320.08
+					},
+					{
+						"year": 2017,
+						"amount": 4835.19
+					}
+				]
 	      	},
 	      	{
+				"id": 63,
 				"type": "Cafe",
 				"specialty": [
 					"Desserts", 
@@ -1133,9 +2064,24 @@ mock_data_callback(
 			        	"lat": 10.311684,
 			        	"lng": 123.894676
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2682.71
+					},
+					{
+						"year": 2016,
+						"amount": 3009.14
+					},
+					{
+						"year": 2017,
+						"amount": 4848.44
+					}
+				]
 	      	},
 	      	{
+				"id": 64,
 				"type": "Cafe",
 				"specialty": [
 					"Salads", 
@@ -1152,9 +2098,24 @@ mock_data_callback(
 			        	"lat": 10.310990,
 			        	"lng": 123.893144
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1733.32
+					},
+					{
+						"year": 2016,
+						"amount": 2790.09
+					},
+					{
+						"year": 2017,
+						"amount": 3068.27
+					}
+				]
 	      	},
 	      	{
+				"id": 65,
 				"type": "Tratorria",
 				"specialty": [
 					"Stews", 
@@ -1170,9 +2131,24 @@ mock_data_callback(
 			        	"lat": 10.310511,
 			        	"lng": 123.891430
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2769.34
+					},
+					{
+						"year": 2016,
+						"amount": 3565.34
+					},
+					{
+						"year": 2017,
+						"amount": 4720.88
+					}
+				]
 	      	},
 	      	{
+				"id": 66,
 				"type": "Fastfood",
 				"specialty": [
 					"Noodles", 
@@ -1188,9 +2164,24 @@ mock_data_callback(
 			        	"lat": 10.309332,
 			        	"lng": 123.895770
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3629.18
+					},
+					{
+						"year": 2016,
+						"amount": 1917.83
+					},
+					{
+						"year": 2017,
+						"amount": 3522.73
+					}
+				]
 	      	},
 	      	{
+				"id": 67,
 				"type": "Pizzeria",
 				"specialty": [
 					"Cereals"
@@ -1205,9 +2196,24 @@ mock_data_callback(
 			        	"lat": 10.313994,
 			        	"lng": 123.901063
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2083.78
+					},
+					{
+						"year": 2016,
+						"amount": 1769.87
+					},
+					{
+						"year": 2017,
+						"amount": 3475.66
+					}
+				]
 	      	},
 	      	{
+				"id": 68,
 				"type": "Cafe",
 				"specialty": [
 					"Pies"
@@ -1222,9 +2228,24 @@ mock_data_callback(
 			        	"lat": 10.314481,
 			        	"lng": 123.894904
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4147.12
+					},
+					{
+						"year": 2016,
+						"amount": 4734.32
+					},
+					{
+						"year": 2017,
+						"amount": 1736.65
+					}
+				]
 	      	},
 	      	{
+				"id": 69,
 				"type": "Cafe",
 				"specialty": [
 					"Desserts", 
@@ -1241,9 +2262,24 @@ mock_data_callback(
 			        	"lat": 10.314029,
 			        	"lng": 123.894375
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3207.12
+					},
+					{
+						"year": 2016,
+						"amount": 2480.70
+					},
+					{
+						"year": 2017,
+						"amount": 4261.64
+					}
+				]
 	      	},
 	      	{
+				"id": 70,
 				"type": "Cafe",
 				"specialty": [
 					"Desserts", 
@@ -1259,9 +2295,24 @@ mock_data_callback(
 			        	"lat": 10.311502,
 			        	"lng": 123.894071
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3750.35
+					},
+					{
+						"year": 2016,
+						"amount": 4518.73
+					},
+					{
+						"year": 2017,
+						"amount": 4921.05
+					}
+				]
 	      	},
 	      	{
+				"id": 71,
 				"type": "Pizzeria",
 				"specialty": [
 					"Soups", 
@@ -1277,9 +2328,24 @@ mock_data_callback(
 			        	"lat": 10.307069,
 			        	"lng": 123.893707
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3238.50
+					},
+					{
+						"year": 2016,
+						"amount": 2902.26
+					},
+					{
+						"year": 2017,
+						"amount": 3084.26
+					}
+				]
 	      	},
 	      	{
+				"id": 72,
 				"type": "Pizzeria",
 				"specialty": [
 					"Noodles", 
@@ -1296,9 +2362,24 @@ mock_data_callback(
 			        	"lat": 10.304494,
 			        	"lng": 123.893813
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3514.85
+					},
+					{
+						"year": 2016,
+						"amount": 1690.72
+					},
+					{
+						"year": 2017,
+						"amount": 2521.29
+					}
+				]
 	      	},
 	      	{
+				"id": 73,
 				"type": "Pub",
 				"specialty": [
 					"Noodles"
@@ -1313,9 +2394,24 @@ mock_data_callback(
 			        	"lat": 10.303062,
 			        	"lng": 123.892723
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2749.35
+					},
+					{
+						"year": 2016,
+						"amount": 2609.52
+					},
+					{
+						"year": 2017,
+						"amount": 3222.77
+					}
+				]
 	      	},
 	      	{
+				"id": 74,
 				"type": "Steakhouse",
 				"specialty": [
 					"Cereals", 
@@ -1332,9 +2428,24 @@ mock_data_callback(
 			        	"lat": 10.298694,
 			        	"lng": 123.897799
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4165.64
+					},
+					{
+						"year": 2016,
+						"amount": 1881.89
+					},
+					{
+						"year": 2017,
+						"amount": 2438.65
+					}
+				]
 	      	},
 	      	{
+				"id": 75,
 				"type": "Bistro",
 				"specialty": [
 					"Pies"
@@ -1349,9 +2460,24 @@ mock_data_callback(
 			        	"lat": 10.296537,
 			        	"lng": 123.898991
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4702.03
+					},
+					{
+						"year": 2016,
+						"amount": 4726.98
+					},
+					{
+						"year": 2017,
+						"amount": 1993.04
+					}
+				]
 	      	},
 	      	{
+				"id": 76,
 				"type": "Cafe",
 				"specialty": [
 					"Desserts"
@@ -1366,9 +2492,24 @@ mock_data_callback(
 			        	"lat": 10.294663,
 			        	"lng": 123.899010
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4997.55
+					},
+					{
+						"year": 2016,
+						"amount": 3536.00
+					},
+					{
+						"year": 2017,
+						"amount": 4647.94
+					}
+				]
 	      	},
 	      	{
+				"id": 77,
 				"type": "Sandwich Bar",
 				"specialty": [
 					"Salads"
@@ -1383,9 +2524,24 @@ mock_data_callback(
 			        	"lat": 10.292083,
 			        	"lng": 123.898144
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1773.28
+					},
+					{
+						"year": 2016,
+						"amount": 4872.06
+					},
+					{
+						"year": 2017,
+						"amount": 4536.56
+					}
+				]
 	      	},
 	      	{
+				"id": 78,
 				"type": "Pancake House",
 				"specialty": [
 					"Seafood", 
@@ -1401,9 +2557,24 @@ mock_data_callback(
 			        	"lat": 10.292180,
 			        	"lng": 123.900678
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2737.74
+					},
+					{
+						"year": 2016,
+						"amount": 3672.41
+					},
+					{
+						"year": 2017,
+						"amount": 3694.73
+					}
+				]
 	      	},
 	      	{
+				"id": 79,
 	      		"type": "Bistro",
 				"specialty": [
 					"Stews"
@@ -1418,9 +2589,24 @@ mock_data_callback(
 			        	"lat": 10.295047,
 			        	"lng": 123.896838
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4329.39
+					},
+					{
+						"year": 2016,
+						"amount": 3304.31
+					},
+					{
+						"year": 2017,
+						"amount": 1896.30
+					}
+				]
 	      	},
 	      	{
+				"id": 80,
 				"type": "Bistro",
 				"specialty": [
 					"Pasta"
@@ -1435,9 +2621,24 @@ mock_data_callback(
 			        	"lat": 10.298370,
 			        	"lng": 123.895984
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3404.96
+					},
+					{
+						"year": 2016,
+						"amount": 1807.51
+					},
+					{
+						"year": 2017,
+						"amount": 1837.09
+					}
+				]
 	      	},
 	      	{
+				"id": 81,
 				"type": "Cafe",
 				"specialty": [
 					"Seafood", 
@@ -1454,9 +2655,24 @@ mock_data_callback(
 			        	"lat": 10.297873,
 			        	"lng": 123.885537
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3234.29
+					},
+					{
+						"year": 2016,
+						"amount": 2848.67
+					},
+					{
+						"year": 2017,
+						"amount": 2952.81
+					}
+				]
 	      	},
 	      	{
+				"id": 82,
 				"type": "Pub",
 				"specialty": [
 					"Pies"
@@ -1471,9 +2687,24 @@ mock_data_callback(
 			        	"lat": 10.298690,
 			        	"lng": 123.895551
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4080.66
+					},
+					{
+						"year": 2016,
+						"amount": 4479.84
+					},
+					{
+						"year": 2017,
+						"amount": 3875.10
+					}
+				]
 	      	},
 	      	{
+				"id": 83,
 				"type": "Delicatessen",
 				"specialty": [
 					"Desserts"
@@ -1488,9 +2719,24 @@ mock_data_callback(
 			        	"lat": 10.301431,
 			        	"lng": 123.898328
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4039.36
+					},
+					{
+						"year": 2016,
+						"amount": 2417.17
+					},
+					{
+						"year": 2017,
+						"amount": 3862.10
+					}
+				]
 	      	},
 	      	{
+				"id": 84,
 				"type": "Delicatessen",
 				"specialty": [
 					"Seafood"
@@ -1505,9 +2751,24 @@ mock_data_callback(
 			        	"lat": 10.323418,
 			        	"lng": 123.892414
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2610.87
+					},
+					{
+						"year": 2016,
+						"amount": 4882.59
+					},
+					{
+						"year": 2017,
+						"amount": 3634.79
+					}
+				]
 	      	},
 	      	{
+				"id": 85,
 				"type": "Tratorria",
 				"specialty": [
 					"Soups"
@@ -1522,9 +2783,24 @@ mock_data_callback(
 			        	"lat": 10.320808,
 			        	"lng": 123.898657
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3832.67
+					},
+					{
+						"year": 2016,
+						"amount": 4393.66
+					},
+					{
+						"year": 2017,
+						"amount": 3230.67
+					}
+				]
 	      	},
 	      	{
+				"id": 86,
 				"type": "Delicatessen",
 				"specialty": [
 					"Sandwiches", 
@@ -1540,9 +2816,24 @@ mock_data_callback(
 			        	"lat": 10.318381,
 			        	"lng": 123.887258
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4346.94
+					},
+					{
+						"year": 2016,
+						"amount": 2942.80
+					},
+					{
+						"year": 2017,
+						"amount": 2018.24
+					}
+				]
 	      	},
 	      	{
+				"id": 87,
 				"type": "Pub",
 				"specialty": [
 					"Salads", 
@@ -1559,9 +2850,24 @@ mock_data_callback(
 			        	"lat": 10.311109,
 			        	"lng": 123.891174
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2810.55
+					},
+					{
+						"year": 2016,
+						"amount": 3150.82
+					},
+					{
+						"year": 2017,
+						"amount": 4853.33
+					}
+				]
 	      	},
 	      	{
+				"id": 88,
 				"type": "Cafe",
 				"specialty": [
 					"Noodles", 
@@ -1578,9 +2884,24 @@ mock_data_callback(
 			        	"lat": 10.302905,
 			        	"lng": 123.894502
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4138.56
+					},
+					{
+						"year": 2016,
+						"amount": 4756.80
+					},
+					{
+						"year": 2017,
+						"amount": 4739.93
+					}
+				]
 	      	},
 	      	{
+				"id": 89,
 				"type": "Pancake House",
 				"specialty": [
 					"Salads", 
@@ -1596,9 +2917,24 @@ mock_data_callback(
 			        	"lat": 10.299177,
 			        	"lng": 123.895350
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2860.76
+					},
+					{
+						"year": 2016,
+						"amount": 3443.98
+					},
+					{
+						"year": 2017,
+						"amount": 3667.32
+					}
+				]
 	      	},
 	      	{
+				"id": 90,
 				"type": "Pub",
 				"specialty": [
 					"Seafood", 
@@ -1615,9 +2951,24 @@ mock_data_callback(
 			        	"lat": 10.296905,
 			        	"lng": 123.898129
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 3500.59
+					},
+					{
+						"year": 2016,
+						"amount": 3246.55
+					},
+					{
+						"year": 2017,
+						"amount": 2885.43
+					}
+				]
 	      	},
 	      	{
+				"id": 91,
 				"type": "Pancake House",
 				"specialty": [
 					"Soups", 
@@ -1633,9 +2984,24 @@ mock_data_callback(
 			        	"lat": 10.313799,
 			        	"lng": 123.918276
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1902.17
+					},
+					{
+						"year": 2016,
+						"amount": 3423.75
+					},
+					{
+						"year": 2017,
+						"amount": 4815.78
+					}
+				]
 	      	},
 	      	{
+				"id": 92,
 				"type": "Cafe",
 				"specialty": [
 					"Pasta"
@@ -1650,9 +3016,24 @@ mock_data_callback(
 			        	"lat": 10.315810,
 			        	"lng": 123.914244
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1719.70
+					},
+					{
+						"year": 2016,
+						"amount": 3040.82
+					},
+					{
+						"year": 2017,
+						"amount": 4624.37
+					}
+				]
 	      	},
 	      	{
+				"id": 93,
 				"type": "Pizzeria",
 				"specialty": [
 					"Pies", 
@@ -1668,9 +3049,24 @@ mock_data_callback(
 			        	"lat": 10.317302,
 			        	"lng": 123.912819
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4512.86
+					},
+					{
+						"year": 2016,
+						"amount": 4953.17
+					},
+					{
+						"year": 2017,
+						"amount": 4039.94
+					}
+				]
 	      	},
 	      	{
+				"id": 94,
 				"type": "Sandwich Bar",
 				"specialty": [
 					"Stews", 
@@ -1686,9 +3082,24 @@ mock_data_callback(
 			        	"lat": 10.315988,
 			        	"lng": 123.908867
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4780.09
+					},
+					{
+						"year": 2016,
+						"amount": 4116.42
+					},
+					{
+						"year": 2017,
+						"amount": 4588.03
+					}
+				]
 	      	},
 	      	{
+				"id": 95,
 				"type": "Cafe",
 				"specialty": [
 					"Salads"
@@ -1703,9 +3114,24 @@ mock_data_callback(
 			        	"lat": 10.317213,
 			        	"lng": 123.906558
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 1573.97
+					},
+					{
+						"year": 2016,
+						"amount": 3144.66
+					},
+					{
+						"year": 2017,
+						"amount": 3492.00
+					}
+				]
 	      	},
 	      	{
+				"id": 96,
 				"type": "Sandwich Bar",
 				"specialty": [
 					"Seafood", 
@@ -1722,9 +3148,24 @@ mock_data_callback(
 			        	"lat": 10.316991,
 			        	"lng": 123.916310
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4343.84
+					},
+					{
+						"year": 2016,
+						"amount": 3295.48
+					},
+					{
+						"year": 2017,
+						"amount": 1985.08
+					}
+				]
 	      	},
 	      	{
+				"id": 97,
 				"type": "Cafe",
 				"specialty": [
 					"Stews", 
@@ -1740,9 +3181,24 @@ mock_data_callback(
 			        	"lat": 10.316130,
 			        	"lng": 123.909571
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2490.20
+					},
+					{
+						"year": 2016,
+						"amount": 3914.10
+					},
+					{
+						"year": 2017,
+						"amount": 3092.82
+					}
+				]
 	      	},
 	      	{
+				"id": 98,
 				"type": "Pancake House",
 				"specialty": [
 					"Noodles", 
@@ -1758,9 +3214,24 @@ mock_data_callback(
 			        	"lat": 10.315700,
 			        	"lng": 123.901306
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2220.17
+					},
+					{
+						"year": 2016,
+						"amount": 4107.20
+					},
+					{
+						"year": 2017,
+						"amount": 3880.03
+					}
+				]
 	      	},
 	      	{
+				"id": 99,
 				"type": "Cafe",
 				"specialty": [
 					"Sandwiches"
@@ -1775,9 +3246,24 @@ mock_data_callback(
 			        	"lat": 10.314684,
 			        	"lng": 123.895107
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 2053.46
+					},
+					{
+						"year": 2016,
+						"amount": 2387.63
+					},
+					{
+						"year": 2017,
+						"amount": 4351.32
+					}
+				]
 	      	},
 	      	{
+				"id": 100,
 				"type": "Cafe",
 				"specialty": [
 					"Stews"
@@ -1792,7 +3278,21 @@ mock_data_callback(
 			        	"lat": 10.311273,
 			        	"lng": 123.892448
 			        }
-		        }
+		        },
+				"revenues": [
+					{
+						"year": 2015,
+						"amount": 4911.73
+					},
+					{
+						"year": 2016,
+						"amount": 1600.26
+					},
+					{
+						"year": 2017,
+						"amount": 3095.05
+					}
+				]
 	      	},
 	    ]
 	}
