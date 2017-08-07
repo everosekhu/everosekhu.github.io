@@ -83,7 +83,6 @@ function createMarker(place) {
 
 	// get default pin image
 	var pin_image = getDefaultPinImage();
-
     var coords = place.geometry.coordinates;
     var latLng = new google.maps.LatLng(coords.lat, coords.lng);
     var marker = new google.maps.Marker({
@@ -104,26 +103,25 @@ function createMarker(place) {
     	specialty = place.specialty.join();
     }
 
-
-    // create info window content   
-    var info_window_content = '<div class="info_content">'
-        + '<h3>' + place.name + '</h3>'
-        + '<div>'
-        	+ 	'<b>Location:</b> ' + place.vicinity
-        	+ 	'<br><b>Type:</b> ' + place.type
-        	+ 	'<br><b>Specialty:</b> ' + specialty
-        	+ 	'<br><b>Visits:</b> ' + place.visits
-        	+ 	'<br><b>Rating:</b> ' + rating
-        	+ 	'<br>'
-        + '</div>' +
-    '</div>';
-
     google.maps.event.addListener(marker, 'click', function() {
 		// increase visits
 		var index = mock_data.map(function(e) {
 		  return e.id;
 		}).indexOf(place.id);
 		increaseVisits(index);
+		
+		// create info window content   
+		var info_window_content = '<div class="info_content">'
+			+ '<h3>' + place.name + '</h3>'
+			+ '<div>'
+				+ 	'<b>Location:</b> ' + place.vicinity
+				+ 	'<br><b>Type:</b> ' + place.type
+				+ 	'<br><b>Specialty:</b> ' + specialty
+				+ 	'<br><b>Visits:</b> ' + mock_data[index].visits
+				+ 	'<br><b>Rating:</b> ' + rating
+				+ 	'<br>'
+			+ '</div>' +
+		'</div>';
 		
 		// show info window
         info_window.setContent(info_window_content);
