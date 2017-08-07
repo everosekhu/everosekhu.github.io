@@ -9,32 +9,8 @@
 	
 	// add event for analytics type
 	$( '#show_analytics' ).click(function() {
-		// get selected analytics type
-		analytics_type = $('#analytics_type').val();
-		
-		// enable analytics "Close" button
-		$('#close_chart').show();
-		$('#chart_container').show();
-		
-		// call corresponding charts
-		switch(analytics_type) {
-			case 'resto_ratings':
-				drawRatingChart();
-				break;
-				
-			case 'resto_specialty':
-				drawSpecialtyChart();
-				break;
-			
-			case 'resto_types':
-				drawTypeChart();
-				break;
-				
-			case 'resto_visits':
-			default:
-				drawVisitChart();
-				break;
-		}
+		// show selected chart
+		showChart();
 	});
 	
 	// hide button and chart
@@ -46,7 +22,7 @@
 
  // simply receives the data from another JS file
  // this data will be use for analytics
- function analytics_data(resto_data) {
+ function analyticsData(resto_data) {
 	if(resto_data.length > 0) {
 		restaurant_data = resto_data;
 		
@@ -70,6 +46,36 @@ function getSpecialties() {
 	});
 
 	return specialties.sort();
+}
+
+// shows selected chart
+function showChart() {
+	// get selected analytics type
+	analytics_type = $('#analytics_type').val();
+	
+	// enable analytics "Close" button
+	$('#close_chart').show();
+	$('#chart_container').show();
+	
+	// call corresponding charts
+	switch(analytics_type) {
+		case 'resto_ratings':
+			drawRatingChart();
+			break;
+		
+		case 'resto_specialty':
+			drawSpecialtyChart();
+			break;
+		
+		case 'resto_types':
+			drawTypeChart();
+			break;
+			
+		case 'resto_visits':
+		default:
+			drawVisitChart();
+			break;
+	}
 }
 
 // shows the line chart for restaurant ratings
