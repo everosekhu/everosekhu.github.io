@@ -1,7 +1,8 @@
  $(function () {
 	// loads latest official release of google charts
 	// corechart = chart types
-	google.charts.load('current', {packages: ['corechart']});
+	// controls = ui(dropdown, sliders)
+	google.charts.load('current', {packages: ['corechart', 'controls']});
 	
  	// get data
  	var restaurant_data = [];
@@ -62,6 +63,10 @@ function showChart() {
 		case 'resto_ratings':
 			drawRatingChart();
 			break;
+			
+		case 'resto_revenues':
+			drawRevenueChart();
+			break;
 		
 		case 'resto_specialty':
 			drawSpecialtyChart();
@@ -80,7 +85,7 @@ function showChart() {
 
 // shows the line chart for restaurant ratings
 function drawRatingChart() {
-   // Define the chart to be drawn
+	// Define the chart to be drawn
 	var data = new google.visualization.DataTable();
 
 	// loop through each restaurant to get rating
@@ -99,19 +104,60 @@ function drawRatingChart() {
 	data.addColumn('number', 'Rating');
 	data.addRows(rows);
    
-   // Set chart options
-   var options = {'title':'Restaurant Ratings',
+	// Set chart options
+	var options = {'title':'Restaurant Ratings',
       'width': 800,
-      'height': 500};
+      'height': 500
+	};
+
+	// Instantiate and draw the chart.
+	var chart = new google.visualization.LineChart(document.getElementById('chart_container'));
+	chart.draw(data, options);
+}
+
+// draws combo chart for restaurant revenues for different years
+function drawRevenueChart() {
+    // Define the chart to be drawn
+	var data = new google.visualization.DataTable();
+	
+	// loop through each restaurant to get restaurant name
+	var rows = [];
+	$.each( restaurant_data, function( key, val ) {
+		var revenues = [];
+		revenues.push(val.name);
+		
+		// append amount
+		$.each( val.revenues, function( k, v ) {
+			revenues.push(v.amount);
+		});
+		
+		rows.push(revenues)
+	});
+	
+	// add chart data for each restaurant revenues
+	data.addColumn('string', 'Restaurants');
+	data.addColumn('number', 2015);
+	data.addColumn('number', 2016);
+	data.addColumn('number', 2017);
+	data.addRows(rows);
+   
+	// Set chart options
+	var options = {'title':'Restaurant Revenues',
+		vAxis: {title: 'Amount'},
+		hAxis: {title: 'Restaurants'},
+		seriesType: 'bars',
+		'width': 800,
+		'height': 500
+	};
 
    // Instantiate and draw the chart.
-   var chart = new google.visualization.LineChart(document.getElementById('chart_container'));
+   var chart = new google.visualization.ComboChart(document.getElementById('chart_container'));
    chart.draw(data, options);
 }
 
 // shows the column chart for each restaurant visits
 function drawVisitChart() {
-   // Define the chart to be drawn
+	// Define the chart to be drawn
 	var data = new google.visualization.DataTable();
 
 	// loop through each restaurant to get visits
@@ -130,14 +176,15 @@ function drawVisitChart() {
 	data.addColumn('number', 'Visits');
 	data.addRows(rows);
    
-   // Set chart options
-   var options = {'title':'Restaurant Visits',
-      'width': 800,
-      'height': 500};
+	// Set chart options
+	var options = {'title':'Restaurant Visits',
+		'width': 800,
+		'height': 500
+	};
 
-   // Instantiate and draw the chart.
-   var chart = new google.visualization.ColumnChart(document.getElementById('chart_container'));
-   chart.draw(data, options);
+	// Instantiate and draw the chart.
+	var chart = new google.visualization.ColumnChart(document.getElementById('chart_container'));
+	chart.draw(data, options);
 }
 
 // shows the pie chart for # of restaurant on each restaurant types
@@ -172,14 +219,15 @@ function drawTypeChart() {
 	data.addColumn('number', 'Restaurants Count');
 	data.addRows(rows);
    
-   // Set chart options
-   var options = {'title':'Number of Restaurants Per Type',
-      'width': 600,
-      'height': 500};
+	// Set chart options
+	var options = {'title':'Number of Restaurants Per Type',
+		'width': 600,
+		'height': 500
+	};
 
-   // Instantiate and draw the chart.
-   var chart = new google.visualization.PieChart(document.getElementById('chart_container'));
-   chart.draw(data, options);
+	// Instantiate and draw the chart.
+	var chart = new google.visualization.PieChart(document.getElementById('chart_container'));
+	chart.draw(data, options);
 }
 
 // shows chart for # of restaurant per specialty
@@ -215,12 +263,13 @@ function drawSpecialtyChart() {
 	data.addColumn('number', 'Restaurants Count');
 	data.addRows(rows);
    
-   // Set chart options
-   var options = {'title':'Number of Restaurants Per Specialty',
-      'width': 600,
-      'height': 500};
+	// Set chart options
+	var options = {'title':'Number of Restaurants Per Specialty',
+		'width': 600,
+		'height': 500
+	};
 
-   // Instantiate and draw the chart.
-   var chart = new google.visualization.BarChart(document.getElementById('chart_container'));
-   chart.draw(data, options);
+	// Instantiate and draw the chart.
+	var chart = new google.visualization.BarChart(document.getElementById('chart_container'));
+	chart.draw(data, options);
 }
